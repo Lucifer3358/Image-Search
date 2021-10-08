@@ -24,7 +24,7 @@ API = "https://apibu.herokuapp.com/api/y-images?query="
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_text(
-        text=f"Hello {update.from_user.mention}, I am an image search bot. You can use me in inline.\n\nMade by @FayasNoushad",
+        text=f"Hello {update.from_user.mention}, I am an image search bot. You can use me in inline.\n\nMade by @gs33venom",
         disable_web_page_preview=True,
         quote=True
     )
@@ -54,7 +54,6 @@ async def search(bot, update):
             InlineQueryResultPhoto(
                 title=update.query,
                 description=result,
-                caption="Made by @FayasNoushad",
                 photo_url=result
             )
         )
